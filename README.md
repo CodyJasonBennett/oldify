@@ -12,13 +12,13 @@ npm install -g oldify && oldify
 ```js
 const transpile = require('oldify/transpile');
 
-transpile('input'); //𝔬𝔲𝔱𝔭𝔲𝔱
+transpile('input', true); //𝖔𝖚𝖙𝖕𝖚𝖙
 ```
 
 ## 𝕮𝖔𝖓𝖋𝖎𝖌
 
 ```bash
-oldify src dist
+oldify src dist true
 ```
 
 **.oldifyrc**
@@ -26,6 +26,7 @@ oldify src dist
 {
   "src": "src",
   "output": "dist",
+  "bold": true,
   "ignore": ["node_modules"]
 }
 ```

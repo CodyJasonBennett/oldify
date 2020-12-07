@@ -1,6 +1,9 @@
-const font = require('./font.js');
+const regular = require('./regular.js');
+const bold = require('./bold.js');
 
-function transpile(source) {
+function transpile(source, alternate) {
+  const font = !!alternate ? bold : regular;
+
   return source
     .split('')
     .map(char => font[char] || char)

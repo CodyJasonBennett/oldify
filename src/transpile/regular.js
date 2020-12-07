@@ -1,4 +1,4 @@
-const font = {
+const regular = {
   a: '𝔞',
   b: '𝔟',
   c: '𝔠',
@@ -53,4 +53,4 @@ const font = {
   Z: 'ℨ',
 };
 
-module.exports = font;
+module.exports = regular;
