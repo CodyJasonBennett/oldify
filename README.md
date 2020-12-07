@@ -3,12 +3,12 @@
 
 ## 𝖀𝖘𝖆𝖌𝖊
 
-Command Line
+ℭ𝔬𝔪𝔪𝔞𝔫𝔡 𝔏𝔦𝔫𝔢
 ```bash
 npm install -g oldify && oldify
 ```
 
-NodeJS
+𝔑𝔬𝔡𝔢𝔍𝔖
 ```js
 const transpile = require('oldify/transpile');
 
