@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const transpile = require('./transpile.js');
 
-function oldify(options) {
-  const { src, output, ignore = [], ...rest } = options;
+function oldify(src, output, options) {
+  const { ignore = [], ...rest } = options;
 
   if (typeof src !== 'string') throw new Error('Invalid src path. src should be a string.');
   if (typeof output !== 'string') throw new Error('Invalid output path. output should be a string.');
@@ -23,12 +23,11 @@ function oldify(options) {
 
       fs.writeFileSync(path.join(output, file), transpile(data, rest), 'utf-8');
     } else {
-      oldify({
-        src: path.join(src, element),
-        output: path.join(output, transpile(element, rest)),
-        ignore,
-        ...rest,
-      });
+      oldify(
+        path.join(src, element),
+        path.join(output, transpile(element, rest)),
+        { ignore, ...rest },
+      );
     }
   });
 }
