@@ -35,7 +35,7 @@ oldify src dist --bold
 const oldify = require('oldify');
 
 // 𝕿𝖗𝖆𝖓𝖘𝖕𝖎𝖑𝖊𝖘 𝖋𝖎𝖑𝖊𝖘 𝖆𝖓𝖉 𝖙𝖍𝖊𝖎𝖗 𝖉𝖎𝖗𝖊𝖈𝖙𝖔𝖗𝖎𝖊𝖘
-oldify('src', 'dist', { bold: true });
+oldify({ src: 'src', output: 'dist', bold: true });
 
 // 𝕿𝖗𝖆𝖓𝖘𝖕𝖎𝖑𝖊𝖘 𝖆 𝖘𝖙𝖗𝖎𝖓𝖌
 oldify.transpile('input', { bold: true });
