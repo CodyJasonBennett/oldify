@@ -6,13 +6,8 @@ const oldify = require('./index.js');
 
 const settings = fs.existsSync('.oldifyrc') && JSON.parse(fs.readFileSync('.oldifyrc'));
 
-const [
-  src = settings.src || '.',
-  output = settings.output || 'dist',
-  ...args
-] = yargs(hideBin(process.argv)).argv._;
-const bold = args && args.includes('--bold');
-const parse = args && args.includes('--parse');
+const { bold, parse, _ } = yargs(hideBin(process.argv)).argv;
+const [src = settings.src || '.', output = settings.output || 'dist'] = _;
 
 const options = Object.assign({ bold, parse }, settings);
 
