@@ -1,6 +1,6 @@
 {
   "name": "oldify",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/CodyJasonBennett/oldify",
   "description": "Transform your code to the olden days with Oldify.",
   "repository": "https://github.com/CodyJasonBennett/oldify.git",
@@ -12,6 +12,6 @@
     "yargs": "^16.2.0"
   },
   "bin": {
-    "oldify": "src/index.js"
+    "oldify": "src/cli.js"
   }
 }
